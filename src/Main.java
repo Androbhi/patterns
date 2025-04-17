@@ -1,10 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        first();
-        second();
-        third();
-        four();
-        five();
+//        first();
+//        second();
+//        third();
+//        four();
+//        five();
+//        six();
+//        seven();
+//        eight();
+        nine();
     }
 
     /*
@@ -88,6 +92,95 @@ public class Main {
         }
     }
 
+   /*
+   *    1 2 3 4 5
+   *    1 2 3 4
+   *    1 2 3
+   *    1 2
+   *    1
+   * */
+    static void six(){
+        for(int i = 0; i < 5; i++){
+            for (int j = 1; j <= 5 - i; j++){
+                System.out.print(j+" ");
+            }
+            System.out.print("\n");
+        }
+    }
+
+    /*
+    *           *
+    *         * * *
+    *       * * * * *
+    *     * * * * * * *
+    *   * * * * * * * * *
+    */
+
+    static void seven(){
+        for (int i = 0; i<5; i++){
+            //space
+            for (int j = 0; j <= 5-i; j++){
+                System.out.print(" ");
+            }
+
+            //star
+            for(int j=0; j < 2*i+1; j++){
+                System.out.print("*");
+            }
+
+            //space
+            for (int j = 0; j <= 5-i; j++){
+                System.out.print(" ");
+            }
+            System.out.print("\n");
+        }
+    }
+
+    /*
+    *   * * * * * * * * *
+    *     * * * * * * *
+    *       * * * * *
+    *         * * *
+    *           *
+    * */
+
+    static void eight(){
+        for (int i = 0; i<5; i++){
+            //space
+            for (int j = 0; j <= i; j++){
+                System.out.print(" ");
+            }
+
+            //star
+            for(int j=0; j < (2*5)-(2*i+1); j++){
+                System.out.print("*");
+            }
+
+            //space
+            for (int j = 0; j <= i; j++){
+                System.out.print(" ");
+            }
+            System.out.print("\n");
+        }
+    }
+
+    /*
+     *           *
+     *         * * *
+     *       * * * * *
+     *     * * * * * * *
+     *   * * * * * * * * *
+     *   * * * * * * * * *
+     *     * * * * * * *
+     *       * * * * *
+     *         * * *
+     *           *
+     */
+
+    static void nine(){
+        seven();
+        eight();
+    }
 
 }
 
