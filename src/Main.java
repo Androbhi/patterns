@@ -8,7 +8,15 @@ public class Main {
 //        six();
 //        seven();
 //        eight();
-        nine();
+//        nine();
+//        ten(5);
+//        eleven(5);
+//        twelve(4);
+//        thirteen(5);
+//        fourteen(5);
+//        fifteen(5);
+//        sixteen(5);
+        seventeen(5);
     }
 
     /*
@@ -182,5 +190,181 @@ public class Main {
         eight();
     }
 
+    /*
+    *   *
+    *   * *
+    *   * * *
+    *   * * * *
+    *   * * * * *
+    *   * * * *
+    *   * * *
+    *   * *
+    *   *
+    * */
+
+    static void ten(int n) {
+
+        for (int i = 0; i <= 2 * n - 1; i++) {
+            int star = i;
+            if (i > n) star = 2 * n - i;
+            for (int j = 0; j < star; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+    }
+
+    /*
+    * 1
+    * 0 1
+    * 1 0 1
+    * 0 1 0 1
+    * 1 0 1 0 1
+    * */
+
+    static void eleven(int n) {
+        int star = 1;
+        for (int i = 0; i <= n; i++) {
+            if (i % 2 == 0) star = 0;
+            else star = 1;
+            for (int j = 0; j < i; j++) {
+                System.out.print(star + " ");
+                star = 1 - star;
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+    * 1      1
+    * 12    21
+    * 123  321
+    * 12344321
+    * */
+    static void twelve(int n){
+        int space = 2 * (n - 1);
+        for(int i = 1; i <= n; i++){
+            //Numbers
+            for (int j = 1; j <= i; j++){
+                System.out.print(j);
+            }
+            //Space
+            for(int j = 1; j <= space; j++){
+                System.out.print(" ");
+            }
+            //Numbers
+            for (int j = i; j >= 1; j--){
+                System.out.print(j);
+            }
+            space = space - 2;
+            System.out.println();
+        }
+    }
+
+    /*
+    * 1
+    * 2 3
+    * 4 5 6
+    * 7 8 9 10
+    * 11 12 13 14 15
+    *
+    * */
+
+    static void thirteen(int n){
+        int count = 1;
+        for(int i = 0; i <= n; i++){
+            for(int j = 0; j<i; j++){
+                System.out.print(count + " ");
+                count++;
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+    * A
+    * A B
+    * A B C
+    * A B C D
+    * A B C D E
+    *
+    * */
+
+    static void fourteen(int n){
+        for(int i = 0; i <= n; i++){
+            for(char chr = 'A'; chr < 'A' + i; chr++){
+                System.out.print(chr);
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+    * A B C D E
+    * A B C D
+    * A B C
+    * A B
+    * A
+    * */
+
+    static void fifteen(int n){
+        for(int i = 0; i <= n; i++){
+            for (char ch = 'A'; ch <= 'A' + (n-i-1); ch++){
+                System.out.print(ch);
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+    * A
+    * B B
+    * C C C
+    * D D D D
+    * E E E E E
+    *
+    * */
+
+    static void sixteen(int n){
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j <= i; j++){
+                System.out.print((char)('A' + i));
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+    *         A
+    *       A B A
+    *     A B C B A
+    *   A B C D C B A
+    * A B C D E D C B A
+    *
+    * */
+
+    static void seventeen(int n){
+        for (int i = 0; i < n; i++){
+            //Space
+
+            for(int j = 0; j < n - i ; j++){
+                System.out.print(" ");
+            }
+            char ch = 'A';
+            int breakpoint = (2*i+1)/2;
+            for(int j=1;j<=2*i+1;j++){
+
+                System.out.print(ch);
+                if(j <= breakpoint) ch++;
+                else ch--;
+            }
+            //Space
+            for(int j = 0; j < n - i ; j++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
 }
 
